@@ -3,11 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 # Configurações de ambiente virtual
-env
-venv
-env/
-venv/
+.env
+./venv
+.env/
+.venv/
 .pytest_cache/
 *.db
-*.db.journal init
+*.db.journal
 *.sqlite3
