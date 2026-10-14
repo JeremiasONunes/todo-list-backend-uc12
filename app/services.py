@@ -27,7 +27,7 @@ class AlteracoesDaTarefa:
     def informado(self, campo: str) -> bool:
         return getattr(self,campo) is not NAO_INFORMADO
 
-class UsuarioService:
+class UsuarioServicos:
     def __init__(self, repositorio: UsuarioRepositorio, Hasher: HashDeSenha) -> None:
         self._repositorio = repositorio
         self._hasher = Hasher
