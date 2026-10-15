@@ -46,9 +46,9 @@ class Tarefa (Base):
     _status = Column("status", String(20), nullable=False)
     prioridade = Column(String(20), nullable=False)
     prazo = Column(Date, nullable=False)
-    criado_em =Column(DateTime, nullable=False, default=DateTime.now)
+    criado_em =Column(DateTime, nullable=False, default=datetime.now)
     atualizado_em=Column(
-        DateTime, nullable=False, default=DateTime.now, onupdate=DateTime.now
+        DateTime, nullable=False, default=datetime.now, onupdate=datetime.now
     )
     _concluido_em = Column("concluido_em", DateTime, nullable=False)
     usuario =  relationship("Usuario", back_populates = "tarefas")

@@ -34,6 +34,7 @@ Sessao_Local = sessionmaker(bind=engine, autocommit=False, autoflush=False)
 Base = declarative_base()
 
 def criar_tabelas() -> None:
+    from app import models #noqa: F401
     Base.metadata.create_all(bind=engine)
 def obter_sessao() -> Generator[Session, None,None]:
     sessao = Sessao_Local()
